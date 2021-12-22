@@ -1,0 +1,8 @@
+div {
+ background-color:gold;
+}
+@media handheld, tv {
+ div {
+ background-color:red;
+ }
+}
