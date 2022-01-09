@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Strona RWD</title>
+    <link rel="stylesheet" href="css/style_sienkiewicz.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <header>
+        <img src="images/gdansk1.jpg" alt="" />
+      </header>
+      <!-- sidebar -->
+      <aside>
+        <nav>
+          <ul>
+            <li><a href="index_sienkiewicz.html">Start</a></li>
+            <li><a href="o_rwd_sienkiewicz.html">O RWD</a></li>
+            <li><a href="css_a_rwd_sienkiewicz.html">CSS a RWD</a></li>
+            <li><a href="realizacja_rwd_sienkiewicz.html">Realizacja RWD</a></li>
+            <li>
+              <a href="css_sienkiewicz_kod.html">KOD pliku CSS z wytłumaczeniami</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <!-- main -->
+      <section id="main">
+        <h1>KOD pliku CSS z wytłumaczeniami</h1>
+        <textarea spellcheck="false" rows="10">
+spellcheck="false" - wyłącza sprawdzanie poprawnej pisowni
+
+* {
+    padding:0;
+    margin:0;
+}
+ustawienie wszystkich odległości oraz marginesów na zero 
+
+html {
+    width:100%;
+    height:100%;
+}
+ustawienie znacznika html szerokość i wysokość na 100% 
+
+body {
+    font-family:Arial, Helvetica, Sans-serif;
+    font-size:14px;line-height:1.5;
+    font-weight:400;
+    color:#434343;
+    background:#FFF;
+}
+font-family:Arial, Helvetica, Sans-serif; - Czcionka tekstu
+font-size:14px;line-height:1.5; - Rozmiar czcionki i wysokość linii
+font-weight:400; - Waga czcionki ( pogrubienie )
+color:#434343; - Kolor tekstu
+background:#FFF; - Kolor tła
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+.container {width:1050px;margin:0 auto;}
+.container {width:1050px;margin:0 auto;} - ustawienie szerokości kontenera na 1050px i wyrównanie do środka
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+header {margin:25px 0;} - ustawienie marginesu w górę o 25px
+header img {width:100%;} - ustawienie szerokości obrazka na 100%
+
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+aside {float:left;width:30%;margin:0 0 25px;} - ustawienie położenia kontenera na lewo, ustawienie szerokości na 30% oraz ustawienie marginesu w dół o 25px
+aside nav ul {list-style:none;} - usunięcie znaczników listy
+aside nav ul li {margin-bottom:1px;} - ustawienie marginesu pomiędzy elementami listy
+aside nav ul li a {display:block;text-decoration:none;color:#000;background:#FFC000;padding:8px 20px;} - wygląd blokowy, usunięcie dokoracji tekstu , ustawienie koloru tekstu na czarny, ustawienie koloru tła na żółty, ustawienie spacji w górę i w dół o 8px i w prawo i lewo o 20px
+aside nav ul li a:hover{background:#212121;color:#FFF;} - ustawienie koloru tła na ciemno-czarny, ustawienie koloru tekstu na biały przy najechaniu myszką na znacznik a
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+#main {float:right;width:65%;margin:0 0 25px;} - ustawienie położenia kontenera na prawo, ustawienie szerokości na 65% oraz ustawienie marginesu w dół o 25px
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+footer {clear:both;color:#FFF;background:#121212;padding:15px 0 15px 30px;} - ustawienie koloru tekstu na biały, ustawienie koloru tła na ciemno-czarny, ustawienie marginesu w górę i dół o 15px, ustawienie marginesu w lewo o 30px
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/*przeczytaj teksty w ramkach */
+/* Dołącz do arkusza następujące @media - poniżej, 6 linijek */
+/* dokonaj kopiowania jeszcze raz @media uzupełni wytłumaczenia */
+/* 7 linijek poniżej masz wykonanie wytłumaczenia, zauważ, że całość jest jako komentarz*/
+
+
+@media (min-width: 1100px) {
+.container {width:1050px;}
+aside {width:30%;}
+#main {width:65%;}
+textarea {width:100%;}
+}
+
+/* wytłumaczenie 5 linie
+
+@media (min-width: 1100px) { - dla urządzeń większych niż 1100px
+.container {width:1050px;} - szerokość głównego kontenera 1050px
+aside {width:30%;} - szerokość aside 30% container
+#main {width:65%;} -  szerokość sekcji main 65% container
+textarea {width:100%;} - szerokość textarea 100% container
+}
+
+*/
+/*------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 1100px) and (min-width: 1000px) { - dla urządzeń pomiędzy 1100px a 1000px szerokości
+.container {width:950px;} - szerokość głównego kontenera 950px
+aside {width:30%;} - szerokość sekcji pobocznej treści 30% kontenera
+#main {width:65%;} - szerokość sekcji main 65% kontenera
+textarea {width:100%;} - szerokość textarea 100% kontenera
+}
+
+/*wytłumaczenie 4 linie patrz wyżej */
+/*------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 1000px) and (min-width: 800px) { - dla urządzeń pomiędzy 1000px a 800px szerokości
+.container {width:750px;} - szerokość głównego kontenera 750px
+aside {width:30%;} - szerokość sekcji pobocznej treści 30% kontenera
+#main {width:65%;} - szerokość sekcji main 65% kontenera
+textarea {width:100%;} - szerokość textarea 100% kontenera
+}
+
+/*wytłumaczenie 4 linie patrz wyżej */
+/*------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 800px) and (min-width: 500px) { - dla urządzeń pomiędzy 800px a 500px szerokości
+.container {width:450px;} - szerokość głównego kontenera 450px
+aside, 
+#main {width:100%;} - szerokość sekcji pobocznej treści i main 100% kontenera
+textarea {width:100%;} - szerokość textarea 100% kontenera
+}
+
+/*wytłumaczenie 4 linie patrz wyżej *- przestawienie układu bloki pod sobą */
+/*------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 500px) { - dla urządzeń poniżej 500px szerokości
+.container {width:90%;}  - szerokość głównego kontenera 90%
+aside,
+#main {width:100%;} - szerokość sekcji pobocznej treści i main 100% kontenera
+textarea {width:100%;} - szerokość textarea 100% kontenera
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+</textarea>
+      </section>
+      <!-- footer -->
+      <footer>
+        <p>RWD_ZSE.pl © 2020</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Strona RWD</title>
+    <link rel="stylesheet" href="css/style_sienkiewicz.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <header>
+        <img src="images/gdansk1.jpg" alt="" />
+      </header>
+      <!-- sidebar -->
+      <aside>
+        <nav>
+          <ul>
+            <li><a href="index_sienkiewicz.html">Start</a></li>
+            <li><a href="o_rwd_sienkiewicz.html">O RWD</a></li>
+            <li><a href="css_a_rwd_sienkiewicz.html">CSS a RWD</a></li>
+            <li><a href="realizacja_rwd_sienkiewicz.html">Realizacja RWD</a></li>
+            <li>
+              <a href="css_sienkiewicz_kod.html">KOD pliku CSS z wytłumaczeniami</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <!-- main -->
+      <section id="main">
+        <h1>KOD pliku CSS z wytłumaczeniami</h1>
+        <textarea spellcheck="false" rows="10">
+Aby nasza strona stała się stroną responsywną musimy dodać do naszego arkusza CSS warunki
+Media Queries.
+Przykłady
+Przykładową linię kodu CSS zawierającą warunek Media Queries:
+@media (max-width: 800px) and (min-width: 600px) {
+/* style css */
+}
+W kodzie powyżej został podany warunek który definiuje, że wpisane w nawias klamrowy style będą
+‘aktywne’ tylko dla szerokości okna przeglądarki mniejszej niż 800px gdyż ustaliliśmy wartość
+‘max-width’ na 800px
+i dla szerokości okna przeglądarki większej niż 600px gdyż ustaliliśmy wartość ‘min-width’ na 600px.
+Tak więc wpisane style będą ‘aktywne’ gdy szerokość okna przeglądarki będzie zawierała się w
+przedziale od 800px do 600px.
+Możemy również stosować taki zapis:
+@media (min-width: 600px) {
+/* style css */
+}
+W takim przypadku nie mamy górnej granicy czyli ‘max-width’ i warunek będzie spełniany za każdym
+razem kiedy szerokość okna przeglądarki będzie większa niż 600px.
+Analogiczna sytuacja jest z zapisem:
+@media (max-width: 800px) {
+/* style css */
+}
+W takim przypadku nie mamy dolnej granicy czyli ‘min-width’ tak więc warunek będzie spełniany za
+każdym razem kiedy szerokość okna przeglądarki będzie mniejsza niż 800px.
+</textarea>
+      </section>
+      <!-- footer -->
+      <footer>
+        <p>RWD_ZSE.pl © 2020</p>
+      </footer>
+    </div>
+  </body>
+</html>
